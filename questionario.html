@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <style> 
+            body {
+                background-color:#bfddf3;
+            }
+        
+        .item {
+            display: inline-block;
+            width: 250px;
+            height: 30px;
+            background-color: white;
+            border: 1px solid black;
+            padding-top: 35px;
+            padding-bottom: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+            }
+        
+        #menu{
+            text-align: center;
+        }
+
+        .item:hover{
+            background-color: blue;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <div id= "menu">
+        <h1>Costões Rochosos de Anchieta</h1>
+        <h2>Questionário sobre a Cultura Oceânica</h2> 
+        </div>
+        
+         <div id= "menu">
+        <a href="index.html"><div class="item"> Início</div></a>
+        <a href="fauna.html"><div class="item"> Fauna</div></a>
+        <a href="flora.html"><div class="item"> Flora</div></a>
+        <a href="questionario.html"><div class="item"> Questionário</div></a>
+    </div>
+        
+  <div id="container">
+    <p id="intro">
+      Este formulário tem como objetivo entender o conhecimento e práticas relacionadas à cultura oceânica e preservação marinha.
+    </p>
+    <form id="form-ocean" action="#" method="post">
+      <!-- Campo: Nome completo -->
+      <div class="form-group">
+        <label> Nome completo (10–100 caracteres) <label>
+        <input type="text" id="nome" name="nome" required minlength="10" maxlength="100">
+      </div>
+
+      <!-- Campo: idade -->
+      <div class="campo">
+        <label for="idade">Idade (5‑125):</label>
+        <input type="number" id="idade" name="idade" min="5" max="125" required>
+      </div>
+
+      <!-- Campo: email -->
+      <div class="campo">
+        <label for="email">E‑mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- Campo: Data de Nascimento -->
+       <div class="campo">
+  <label for="dtnasc">Data de Nascimento (02‑02‑1901 a 30‑11‑2025):</label>
+  <input type="date" id="dtnasc" name="dtnasc"
+         min="1901-02-02" max="2025-11-30" required>
+</div>
+      <!-- Campo: Estado onde reside -->
+      <div class="form-group">
+        <label for="estado">Estado onde reside:</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione...</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR"> Roraima </option>
+          <option value="SC"> Santa Catarina </option>
+          <option value="SP"> São Paulo </option>
+          <option value="SE">Sergipe </option>
+          <option value="TO">Tocantins </option>
+        </select>
+      </div>
+
+      <!-- Campo: Cultura Oceânica -->
+      <div class="form-group">
+        <label>Você já ouviu falar sobre Cultura Oceânica?</label>
+        <input type="radio" id="oceania-sim" name="oceania" value="Sim" required>
+        <label for="oceania-sim" class="inline">Sim </label>
+        <input type="radio" id="oceania-nao" name="oceania" value="Não">
+        <label for="oceania-nao" class="inline">Não </label>
+      </div>
+
+      <!-- Campo: Relação com o mar -->
+      <div class="form-group">
+        <label for="relacao_mar">Qual sua relação com o mar?</label>
+        <textarea id="relacao_mar" name="relacao_mar" rows="5" cols="50"></textarea>
+      </div>
+
+      <!-- Campo: Ações praticadas -->
+      <div class="form-group">
+        <label>Quais dessas ações você já praticou? (marque todas que se aplicam)</label>
+        <input type="checkbox" id="acao1" name="acoes[]" value="reutilizei">
+        <label for="acao1" class="inline">Reutilizei plásticos e embalagens para reduzir o lixo </label>
+        <input type="checkbox" id="acao2" name="acoes[]" value="evitei_descartar">
+        <label for="acao2" class="inline">Evitei descartar lixo em praias, rios ou mares </label>
+        <input type="checkbox" id="acao3" name="acoes[]" value="sacolas_reutilizaveis">
+        <label for="acao3" class="inline">Usei sacolas reutilizáveis ao fazer compras </label>
+        <input type="checkbox" id="acao4" name="acoes[]" value="campanhas">
+        <label for="acao4" class="inline">Participei de campanhas de conscientização sobre a vida marinha </label>
+        <input type="checkbox" id="acao5" name="acoes[]" value="transporte_limpo">
+        <label for="acao5" class="inline">Optei por meios de transporte menos poluentes </label>
+        <input type="checkbox" id="acao6" name="acoes[]" value="economizei_agua">
+        <label for="acao6" class="inline">Economizei água no dia a dia </label>
+        <input type="checkbox" id="acao7" name="acoes[]" value="compartilhei">
+        <label for="acao7" class="inline">Compartilhei informações sobre a proteção dos oceanos nas redes sociais </label>
+        <input type="checkbox" id="acao8" name="acoes[]" value="denunciei">
+        <label for="acao8" class="inline">Denunciei ou evitei práticas prejudiciais ao meio ambiente marinho </label>
+        <input type="checkbox" id="acao9" name="acoes[]" value="apoiar_projetos">
+        <label for="acao9" class="inline">Apoiei projetos ou ONGs ligadas à conservação marinha </label>
+      </div>
+      
+      
+
+      <!-- Avaliação do site -->
+      <div class="section" id="section4">
+    <h2 class="section-title"> Avalie nosso site!</h2>
+    <div class="star-rating">
+        <input type="radio" id="star5"value="5" />
+        <label for="star5" title="5 estrelas">★</label>
+
+        <input type="radio" id="star4" value="4" />
+        <label for="star4" title="4 estrelas">★</label>
+
+        <input type="radio" id="star3" value="3" />
+        <label for="star3" title="3 estrelas">★</label>
+
+        <input type="radio" id="star2" value="2" />
+        <label for="star2" title="2 estrelas">★</label>
+
+        <input type="radio" id="star1" value="1" />
+        <label for="star1" title="1 estrela">★</label>
+    </div>
+</div>
+
+
+      <!-- Botões -->
+      <div class="form-group button-group">
+        <button type="submit" id="btn-enviar">Enviar</button>
+        <button type="reset" id="btn-limpar">Limpar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
